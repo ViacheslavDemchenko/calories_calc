@@ -137,8 +137,8 @@ body {
 	margin-top: 1.5em;
 }
 
-.Mifflin-San-JEora__input,
-.Harris-Benedict__input {
+.mifflin-san-jeor__input,
+.harris-benedict__input {
 	width: 15em;
 	height: 2em;
 	display: flex;
@@ -152,8 +152,8 @@ body {
 	box-shadow: 0 5px 5px 5px rgba(169, 169, 169, 0.8);
 }
 
-.Mifflin-San-JEora__field,
-.Harris-Benedict__field {
+.mifflin-san-jeor__field,
+.harris-benedict__field {
 	margin-left: 1em;
 }
 
