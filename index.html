@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+    <title>Калькулятор расчета калорий по формулам Миффлина-Сан Джеора и Харриса-Бенедикта</title>
+</head>
+<body>
+	<div class="container">
+		<div class="calc">
+			<h1 class="title">Калькулятор расчета калорий</h1>	
+			<div class="personal-data">
+				<h3 class="personal-data__title">Персональные характеристики</h3>
+				<div class="personal-data__inner-wrap">
+					<div class="weight-block">
+						<p class="weight-block__desc">Вес</p>
+						<input class="personal-data__field" id="weight-field" type="text" name="weight" placeholder="Введите вес в кг">
+					</div>
+					<div class="height-block">
+						<p class="weight-block__desc">Рост</p>
+						<input class="personal-data__field" id="height-field" type="text" name="height" placeholder="Введите рост в см">
+					</div>
+					<div class="age-block">
+						<p class="weight-block__desc">Возраст</p>
+						<input class="personal-data__field" id="age-field" type="text" name="age" placeholder="Введите полный возраст">
+					</div>
+				</div>
+			</div>
+			<div class="gender-physical-activity__wrap">
+				<div class="gender">
+					<h3 class="gender__title">Выбор пола</h3>
+					<div class="gender__inner-wrap">
+					<label for="male-gender">Мужской</label>
+					<input class="gender-field" type="radio" name="gender" id="male-gender" checked>
+					<label for="female-gender">Женский</label>
+					<input class="gender-field" type="radio" name="gender" id="female-gender">
+					</div>
+				</div>
+				<div class="physical-activity">
+					<h3 class="physical-activity__title">Коэффициенты физической активности</h3>
+					<select id="physical-activity__options">
+					    <option>Уровень физической активности</option>
+					    <option value="1.2">Минимальные нагрузки (сидячая работа)</option>
+					    <option value="1.375">Немного дневной активности и легкие упражнения 1-3 раза в неделю</option>
+					    <option value="1.4625">Тренировки 4-5 раз в неделю (или работа средней тяжести)</option>
+					    <option value="1.55">Интенсивные тренировки 4-5 раз в неделю</option>
+					    <option value="1.6375">Ежедневные тренировки</option>
+					    <option value="1.725">Ежедневные интенсивные тренировки или тренировки 2 раза в день</option>
+					    <option value="1.9">Тяжелая физическая работа или интенсивные тренировки 2 раза в день</option>
+					</select>
+				</div>
+			</div>
+			<div class="formula-choice">
+				<h3 class="formula__title">Выбор формулы расчета</h3>
+				<div class="formula-choice__wrap">
+				<div class="formula-choice__inner-wrap">
+					<div class="Mifflin-San-JEora__input">
+					<label for="Mifflin-San-JEora">Миффлина-Сан Джеора</label>
+					<input class="Mifflin-San-JEora__field" type="radio" name="formula" id="Mifflin-San-JEora" checked>
+					</div>
+					<div class="Harris-Benedict__input">
+					<label for="Harris-Benedict">Харриса-Бенедикта</label>
+					<input class="Harris-Benedict__field" type="radio" name="formula" id="Harris-Benedict">
+					</div>
+				</div>
+					<button class="button-calc">Рассчитать</button>
+				</div>
+			</div>
+			<div class="calculated-data">
+				<h3 class="calculated-data__title">Результаты расчета</h3>
+				<div class="calculated-data__inner-wrap">
+					<div class="max-daily-calories">
+						<p class="max-daily-calories__desc">Рекомендуемое суточное количество калорий</p>
+						<span class="max-daily__result"></span>
+					</div>
+					<div class="slim-daily-calories">
+						<p class="slim-daily-calories__desc">Суточное количество калорий для сброса веса</p>
+						<span class="slim-daily__result"></span>
+					</div>
+					<div class="daily-proteins">
+						<p class="daily-proteins__desc">Суточное количество белков</p>
+						<span class="daily-proteins__result"></span>
+					</div>
+					<div class="daily-fats">
+						<p class="daily-fats__desc">Суточное количество жиров</p>
+						<span class="daily-fats__result"></span>
+					</div>
+					<div class="daily-carbs">
+						<p class="daily-carbs__desc">Суточное количество углеводов</p>
+						<span class="daily-carbs__result"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
